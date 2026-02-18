@@ -36,7 +36,7 @@ const SummaryScreen: React.FC<SummaryScreenProps> = ({ state, onSend, onBack }) 
         onClick={onBack}
         className="self-start text-muted-foreground text-sm mb-4 flex items-center gap-1 hover:text-foreground transition-colors"
       >
-        ← חזרה
+        חזרה →
       </button>
 
       <div className="text-center mb-6">

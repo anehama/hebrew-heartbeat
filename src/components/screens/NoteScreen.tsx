@@ -22,7 +22,7 @@ const NoteScreen: React.FC<NoteScreenProps> = ({ note, onNoteChange, onNext, onB
         onClick={onBack}
         className="self-start text-muted-foreground text-sm mb-2 flex items-center gap-1 hover:text-foreground transition-colors"
       >
-        חזרה →
+        → חזרה
       </button>
 
       <ProgressDots current={5} total={5} />
@@ -66,7 +66,7 @@ const NoteScreen: React.FC<NoteScreenProps> = ({ note, onNoteChange, onNext, onB
         className="w-full py-4 px-8 rounded-2xl text-primary-foreground font-semibold text-lg shadow-soft hover:shadow-hover active:scale-95 transition-all duration-200"
         style={{ background: "var(--gradient-button)" }}
       >
-        ← לסיכום
+        לסיכום ←
       </button>
     </div>
   );

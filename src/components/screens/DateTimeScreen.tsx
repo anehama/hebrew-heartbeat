@@ -28,7 +28,7 @@ const DateTimeScreen: React.FC<DateTimeScreenProps> = ({
         onClick={onBack}
         className="self-start text-muted-foreground text-sm mb-2 flex items-center gap-1 hover:text-foreground transition-colors"
       >
-        חזרה →
+        → חזרה
       </button>
 
       <ProgressDots current={4} total={5} />
@@ -92,7 +92,7 @@ const DateTimeScreen: React.FC<DateTimeScreenProps> = ({
         }`}
         style={{ background: canProceed ? "var(--gradient-button)" : "hsl(var(--muted))" }}
       >
-        ← המשך
+        המשך ←
       </button>
     </div>
   );

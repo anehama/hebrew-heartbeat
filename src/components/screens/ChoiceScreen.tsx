@@ -14,7 +14,7 @@ const ChoiceScreen: React.FC<ChoiceScreenProps> = ({ onSelect, onBack }) => {
         onClick={onBack}
         className="self-start text-muted-foreground text-sm mb-2 flex items-center gap-1 hover:text-foreground transition-colors"
       >
-        ← חזרה
+        חזרה →
       </button>
 
       <ProgressDots current={1} total={5} />

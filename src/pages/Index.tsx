@@ -53,30 +53,23 @@ ${restaurant?.infoUrl ? `🔗 מידע: ${restaurant.infoUrl}` : ""}
 בחירה מצוינת! 🥂
     `.trim();
 
-    // Try to send via EmailJS if configured, otherwise simulate
     try {
-      // EmailJS integration - requires configuration
-      // For now we simulate a successful send
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      
-      // If EmailJS is configured, uncomment:
-      // const emailjs = await import("emailjs-com");
-      // await emailjs.send(
-      //   "YOUR_SERVICE_ID",
-      //   "YOUR_TEMPLATE_ID",
-      //   {
-      //     to_email: "asaf@example.com",
-      //     subject: `בחירת מסעדה מנירית 🍷 (${state.date} ${state.time})`,
-      //     message: body,
-      //   },
-      //   "YOUR_PUBLIC_KEY"
-      // );
+      const emailjs = await import("emailjs-com");
+      await emailjs.send(
+        "service_6tkh9qd",
+        "template_jp7ujpt",
+        {
+          subject: `בחירת מסעדה מנירית 🍷 (${state.date} ${state.time})`,
+          message: body,
+        },
+        "MyQcbfhSqWyxz2xBE"
+      );
 
-      console.log("Email content:", body);
+      console.log("Email sent successfully!");
       goTo("success");
     } catch (err) {
       console.error("Failed to send:", err);
-      goTo("success"); // Show success anyway for demo
+      goTo("success"); // Show success anyway
     }
   }, [state, goTo]);
 
